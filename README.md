@@ -16,7 +16,7 @@ License in LICENSE file.
 
 
 
-##SimpleVR Dependencies
+## SimpleVR dependencies
 
 - SteamVR
 - SuperScience https://github.com/Unity-Technologies/SuperScience
@@ -26,10 +26,10 @@ License in LICENSE file.
 
 ## SimpleVR.Example dependencies
 
-###InteractableFeedback
+### InteractableFeedback
 
 - Quick Outline [https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488)
 
-##Recommended plugins
+## Recommended plugins
 
 - VR Tunnelling Pro [https://github.com/sigtrapgames/VrTunnellingPro-Unity](https://github.com/sigtrapgames/VrTunnellingPro-Unity)
