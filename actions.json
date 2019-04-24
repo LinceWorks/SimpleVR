@@ -1,0 +1,93 @@
+{
+  "actions": [
+    {
+      "name": "/actions/SimpleVR_Ingame/in/Move",
+      "type": "vector2",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/Grab",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/TurnAround",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/SkeletonLeftHand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/SkeletonRightHand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/TurnLeft",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/in/TurnRight",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/SimpleVR_Ingame/out/Haptic",
+      "type": "vibration"
+    },
+    {
+      "name": "/actions/SimpleVR_Menu/in/Menu",
+      "type": "boolean",
+      "requirement": "suggested"
+    },
+    {
+      "name": "/actions/SimpleVR_Menu/in/Enter",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/SimpleVR_Menu/in/Back",
+      "type": "boolean"
+    }
+  ],
+  "action_sets": [
+    {
+      "name": "/actions/SimpleVR_Ingame",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/SimpleVR_Menu",
+      "usage": "single"
+    }
+  ],
+  "default_bindings": [
+    {
+      "controller_type": "vive_controller",
+      "binding_url": "bindings_vive_controller.json"
+    },
+    {
+      "controller_type": "oculus_touch",
+      "binding_url": "bindings_oculus_touch.json"
+    },
+    {
+      "controller_type": "knuckles",
+      "binding_url": "bindings_knuckles.json"
+    },
+    {
+      "controller_type": "holographic_controller",
+      "binding_url": "bindings_holographic_controller.json"
+    }
+  ],
+  "localization": [
+    {
+      "language_tag": "en_US",
+      "/actions/SimpleVR_Ingame/in/Move": "Move",
+      "/actions/SimpleVR_Ingame/in/Grab": "Grab",
+      "/actions/SimpleVR_Ingame/in/TurnAround": "TurnAround",
+      "/actions/SimpleVR_Ingame/out/Haptic": "Haptic",
+      "/actions/SimpleVR_Ingame/in/SkeletonLeftHand": "Skeleton (Left)",
+      "/actions/SimpleVR_Ingame/in/SkeletonRightHand": "Skeleton (Right)"
+    }
+  ]
+}

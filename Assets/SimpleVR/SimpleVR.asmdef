@@ -1,0 +1,17 @@
+{
+    "name": "SimpleVR",
+    "references": [
+        "SteamVR",
+        "SuperScience",
+        "QuickOutline",
+        "SteamVR_Actions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

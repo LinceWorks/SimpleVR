@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1a45f7b2cbed945aa56fa1cc16c72f, type: 3}
+  m_Name: InputBindings
+  m_EditorClassIdentifier: 
+  dataVR: {fileID: 11400000, guid: d9d103487ae888a4c8f44d35a18f7bc3, type: 2}
+  settings: {fileID: 11400000, guid: b59d356aeaa041740a665d01e0c36743, type: 2}
+  currentActionSets:
+  - actionSetPath: /actions/SimpleVR_Ingame
+  - actionSetPath: /actions/SimpleVR_Menu
+  ingameActionSet:
+    actionSetPath: /actions/SimpleVR_Ingame
+  menuActionSet:
+    actionSetPath: /actions/SimpleVR_Menu

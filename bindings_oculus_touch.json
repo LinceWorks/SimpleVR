@@ -1,0 +1,139 @@
+{
+   "alias_info" : {},
+   "app_key" : "application.generated.unity.simplevr.exe",
+   "bindings" : {
+      "/actions/simplevr_ingame" : {
+         "haptics" : [
+            {
+               "output" : "/actions/simplevr_ingame/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/simplevr_ingame/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
+         "skeleton" : [
+            {
+               "output" : "/actions/simplevr_ingame/in/skeletonrighthand",
+               "path" : "/user/hand/left/input/skeleton/right"
+            },
+            {
+               "output" : "/actions/simplevr_ingame/in/skeletonrighthand",
+               "path" : "/user/hand/right/input/skeleton/right"
+            },
+            {
+               "output" : "/actions/simplevr_ingame/in/skeletonlefthand",
+               "path" : "/user/hand/left/input/skeleton/left"
+            }
+         ],
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_ingame/in/grab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_ingame/in/turnaround"
+                  },
+                  "position" : {
+                     "output" : "/actions/simplevr_ingame/in/move"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/left/input/joystick"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_ingame/in/grab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_ingame/in/turnaround"
+                  },
+                  "position" : {
+                     "output" : "/actions/simplevr_ingame/in/move"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/right/input/joystick"
+            }
+         ]
+      },
+      "/actions/simplevr_menu" : {
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/enter"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/enter"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/back"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/back"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/menu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/y"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/simplevr_menu/in/menu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/y"
+            }
+         ]
+      }
+   },
+   "controller_type" : "oculus_touch",
+   "description" : "",
+   "name" : "Default Binding",
+   "options" : {},
+   "simulated_actions" : []
+}
