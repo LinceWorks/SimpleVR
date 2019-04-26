@@ -2,7 +2,7 @@
 
 ![SimpleVR_main](ReadmeData/SimpleVR_main.gif)
 
-Unity3D VR Framework.
+Unity3D VR lightweight framework.
 
 Created by **Daniel Castaño Estrella** at **Lince Works**.
 
@@ -12,9 +12,79 @@ License in LICENSE file.
 
 
 
-**IMPORTANT:** Only SteamVR dependency is included. Others should be downloaded and placed in Assets/Plugins folder.
+**IMPORTANT:** Only SteamVR plugin dependency is included. Others should be downloaded and placed in Assets/Plugins folder.
 
-Read the following instructions to make sure everything works ok.
+Read the instructions to make sure everything works ok.
+
+## Index
+
+[SimpleVR capabilities](#SimpleVR-capabilities)
+
+[Instructions](#Instructions)
+
+[SimpleVR dependencies](#SimpleVR-dependencies)
+
+[SimpleVR.Example dependencies](#SimpleVR.Example-dependencies)
+
+[Recommended plugins](#Recommended-plugins)
+
+## SimpleVR capabilities
+
+SimpleVR is a lightweight framework for Unity3D that solves common issues and features every VR game needs.
+
+Main features:
+* Locomotion and Teleportation
+* Object Manipulation
+* Management of walls and obstructions
+* Support SteamVR Input system
+* ...
+
+It uses SteamVR plugin only to support its input system. You can map interactions with VR controllers with its editor.
+
+![](https://valvesoftware.github.io/steamvr_unity_plugin/images/Binding-UI.png)
+
+### Sample images and gifs
+
+*Note: When you read about walls, it means something that has a collider but not physics simulation (not RigidBody).*
+
+- Locomotion (with joystick and head movement working together)
+  - Example of head movement:
+    - ![move_body](ReadmeData/move_body.gif)
+- Easy teleport setup
+  - CharacterVR class public methods:
+    - MoveTo
+    - SetPosition
+    - LookAt
+    - SetRotation
+    - SetRotation
+    - SetYawRotation
+    - AddYawRotation
+    - Rotate
+- Capsule and sphere **Interactable** detection
+  - Interactable and Grabbables (inherits from Interactable) can be:
+    - Ethereal: detectable through walls
+    - Constrained Detection: Can't detect with capsule, only sphere
+    - Undetectable: Can't be detected (can't interact with)
+- Attachment points for Grabbable gameObjects (don't depend on the pivot of the object to grab it)
+  - ![attachment_point](ReadmeData/attachment_point.gif)
+- Fade to black next to walls (depends on the direction player is looking at)
+  - ![fade_next_wall](ReadmeData/fade_next_wall.gif)
+- Can't grab objects through walls, even can't push objects through walls with hands or other objects, can't release object until it is outside a wall.
+  - ![wall_interactables](ReadmeData/wall_interactables.gif)
+  - can't grab the object until player moves to the other side of the wall
+  - ![wall_interactables_2](ReadmeData/wall_interactables_2.gif)
+- Slots to store your objects
+  - ![slots](ReadmeData/slots.gif)
+  - Different slot types (Slot and Grabbable must match their Attachment Type Name to interact) and a slot can't have an Initial Grabbable (instantiates a Grabbable object on Start)
+    - ![Slot](ReadmeData/Slot.PNG)
+    - ![Grabbable](ReadmeData/Grabbable.PNG)
+- Linear Drive with positions and animations (**Auto Return** option: 1st drawer and animated cube)
+  - ![linear_drive](ReadmeData/linear_drive.gif)
+- Easy config with ScriptableObjects
+  - ![DataVR](ReadmeData/DataVR.PNG)
+  - ![HandVRConstants](ReadmeData/HandVRConstants.PNG)
+  - ![GrabbableConstants](ReadmeData/GrabbableConstants.PNG)
+  - ![InputBindings](ReadmeData/InputBindings.PNG)
 
 ## Instructions
 
@@ -70,48 +140,3 @@ InteractableFeedback.cs needs:
 
 - VR Tunnelling Pro [https://github.com/sigtrapgames/VrTunnellingPro-Unity](https://github.com/sigtrapgames/VrTunnellingPro-Unity)
   - If missing, there will be a missing script in **CharacterVR** prefab's camera.
-
-## SimpleVR capabilities
-
-*Note: When I talk about walls, it means something that has a collider but not physics simulation (not RigidBody).*
-
-- Locomotion (with joystick and head movement working together)
-  - Example of head movement:
-    - ![move_body](ReadmeData/move_body.gif)
-- Easy teleport setup
-  - CharacterVR class public methods:
-    - MoveTo
-    - SetPosition
-    - LookAt
-    - SetRotation
-    - SetRotation
-    - SetYawRotation
-    - AddYawRotation
-    - Rotate
-- Capsule and sphere **Interactable** detection
-  - Interactable and Grabbables (inherits from Interactable) can be:
-    - Ethereal: detectable through walls
-    - Constrained Detection: Can't detect with capsule, only sphere
-    - Undetectable: Can't be detected (can't interact with)
-- Attachment points for Grabbable gameObjects (don't depend on the pivot of the object to grab it)
-  - ![attachment_point](ReadmeData/attachment_point.gif)
-- Fade to black next to walls (depends on the direction player is looking at)
-  - ![fade_next_wall](ReadmeData/fade_next_wall.gif)
-
-- Can't grab objects through walls, even can't push objects through walls with hands or other objects, can't release object until it is outside a wall.
-  - ![wall_interactables](ReadmeData/wall_interactables.gif)
-  - can't grab the object until player moves to the other side of the wall
-  - ![wall_interactables_2](ReadmeData/wall_interactables_2.gif)
-- Slots to store your objects
-  - ![slots](ReadmeData/slots.gif)
-  - Different slot types (Slot and Grabbable must match their Attachment Type Name to interact) and a slot can't have an Initial Grabbable (instantiates a Grabbable object on Start)
-    - ![Slot](ReadmeData/Slot.PNG)
-    - ![Grabbable](ReadmeData/Grabbable.PNG)
-- Linear Drive with positions and animations (**Auto Return** option: 1st drawer and animated cube)
-  - ![linear_drive](ReadmeData/linear_drive.gif)
-
-- Easy config with ScriptableObjects
-  - ![DataVR](ReadmeData/DataVR.PNG)
-  - ![HandVRConstants](ReadmeData/HandVRConstants.PNG)
-  - ![GrabbableConstants](ReadmeData/GrabbableConstants.PNG)
-  - ![InputBindings](ReadmeData/InputBindings.PNG)
