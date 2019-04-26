@@ -1,10 +1,10 @@
 # SimpleVR
 
+![SimpleVR_main](Readme data\SimpleVR_main.gif)
+
 Unity3D VR Framework.
 
-
-
-Created by Daniel Castaño Estrella at Lince Works.
+Created by **Daniel Castaño Estrella** at **Lince Works**.
 
 Contact: daniel@linceworks.com
 
