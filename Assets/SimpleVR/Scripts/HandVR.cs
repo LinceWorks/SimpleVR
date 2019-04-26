@@ -135,15 +135,25 @@ namespace SimpleVR
 
 		[HideInInspector] public event OnSomethingChange OnHandHoverChangeFeedback;
 		[HideInInspector] public event OnSomethingChange OnHandAttachChangeFeedback;
-		#endregion
+        #endregion
 
-		private void Awake()
+		private void GetData()
 		{
 			CharacterVR = GetComponentInParent<CharacterVR>();
 			PhysicsTracker = new PhysicsTracker();
 			Collider = GetComponentInChildren<Collider>();
 			TrackedPoseDriver = GetComponent<TrackedPoseDriver>();
 			PoseProvider = GetComponent<PoseProvider>();
+		}
+
+        private void OnValidate()
+        {
+			GetData();
+        }
+
+        private void Awake()
+		{
+			GetData();
 		}
 
 		private void Start()

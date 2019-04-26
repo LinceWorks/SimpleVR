@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 114033229281374714}
   - component: {fileID: 54309224759204616}
   - component: {fileID: 5476049376482544986}
-  - component: {fileID: 8275780540390495094}
+  - component: {fileID: 7364993580639856681}
   m_Layer: 12
   m_Name: RightHand
   m_TagString: Untagged
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279897589383350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1742909100, guid: ed7343f30e3843b3afda8f8b02669cea, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Device: 1
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentPointName: {fileID: 11400000, guid: 4a4874b6db6dfac48a711196a2a4f4b2,
     type: 2}
-  interactableDetectionDirection: {x: 0, y: 0, z: 1}
+  forwardDetectionDirection: {x: 0, y: 0, z: 1}
 --- !u!114 &114033229281374714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
   visible: {r: 0, g: 0, b: 0, a: 0}
   hover: {r: 0, g: 0, b: 0, a: 0}
   grab: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &8275780540390495094
+--- !u!114 &7364993580639856681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -602,11 +602,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279897589383350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4582aa10188532448f1e72abd847260, type: 3}
+  m_Script: {fileID: 11500000, guid: a9d6f721e3ef17d4695e34c4ec6ed4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachPositionOffset: {x: 0, y: 0, z: 0}
-  attachRotationOffset: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1335409059933578
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +740,7 @@ GameObject:
   - component: {fileID: 114097058885654636}
   - component: {fileID: 54740833085040642}
   - component: {fileID: 4737659610626730026}
-  - component: {fileID: 8757727949047432177}
+  - component: {fileID: 2008418783581798951}
   m_Layer: 12
   m_Name: LeftHand
   m_TagString: Untagged
@@ -776,7 +774,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457643258773708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1742909100, guid: ed7343f30e3843b3afda8f8b02669cea, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Device: 1
@@ -799,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentPointName: {fileID: 11400000, guid: ad2ad896ea1bb9449bc60704691feaa0,
     type: 2}
-  interactableDetectionDirection: {x: 0, y: 0, z: 1}
+  forwardDetectionDirection: {x: 0, y: 0, z: 1}
 --- !u!114 &114097058885654636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +850,7 @@ MonoBehaviour:
   visible: {r: 0, g: 0, b: 0, a: 0}
   hover: {r: 0, g: 0, b: 0, a: 0}
   grab: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &8757727949047432177
+--- !u!114 &2008418783581798951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -861,11 +859,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457643258773708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4582aa10188532448f1e72abd847260, type: 3}
+  m_Script: {fileID: 11500000, guid: a9d6f721e3ef17d4695e34c4ec6ed4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachPositionOffset: {x: 0, y: 0, z: 0}
-  attachRotationOffset: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1469048528818252
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,9 +953,8 @@ GameObject:
   - component: {fileID: 81108767595963884}
   - component: {fileID: 114712178713110114}
   - component: {fileID: 114215576007607266}
-  - component: {fileID: 114434175466658714}
-  - component: {fileID: 114307634883450360}
   - component: {fileID: 114721582184169832}
+  - component: {fileID: 114307634883450360}
   m_Layer: 9
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -993,9 +988,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1048,7 +1044,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475039881012122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1742909100, guid: ed7343f30e3843b3afda8f8b02669cea, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Device: 0
@@ -1071,7 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 0}
   alpha: 0
---- !u!114 &114434175466658714
+--- !u!114 &114721582184169832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1080,56 +1076,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475039881012122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Script: {fileID: 11500000, guid: d8cd3a0d4a6528e41b2f926fad4603d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 4980416708520976}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  stopNaNPropagation: 1
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!114 &114307634883450360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,18 +1126,6 @@ MonoBehaviour:
   blurPasses: 3
   blurSamples: 0
   irisZRejection: 0
---- !u!114 &114721582184169832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475039881012122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8cd3a0d4a6528e41b2f926fad4603d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1492526143008718
 GameObject:
   m_ObjectHideFlags: 0

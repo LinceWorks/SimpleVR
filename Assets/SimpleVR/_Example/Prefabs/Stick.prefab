@@ -82,7 +82,7 @@ MonoBehaviour:
   ethereal: 0
   constrainedDetection: 0
   undetectable: 0
-  attachmentTypeName: {fileID: 0}
+  attachmentTypeName: {fileID: 11400000, guid: fb81ba4daa5de6b45b62ec0181a37490, type: 2}
 --- !u!114 &114505802576024708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 3
-  outlineColor: {r: 1, g: 0.968766, b: 0.7688679, a: 1}
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
   precomputeOutline: 0
   bakeKeys: []
@@ -193,6 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1dbbf6c863df08418a4b717cae90cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 8898028953873135106}
+  mode: 3
+  width: 5
 --- !u!1 &1208011496210446
 GameObject:
   m_ObjectHideFlags: 0

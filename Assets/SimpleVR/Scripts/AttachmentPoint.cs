@@ -2,6 +2,7 @@
 
 namespace SimpleVR
 {
+	[RequireComponent(typeof(Grabbable))]
 	public class AttachmentPoint : MonoBehaviour
 	{
 		#region Fields

@@ -2,9 +2,10 @@
     "name": "SimpleVR",
     "references": [
         "SteamVR",
+        "SteamVR_Actions",
+        "UnityEngine.SpatialTracking",
         "SuperScience",
-        "QuickOutline",
-        "SteamVR_Actions"
+        "QuickOutline"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -13,5 +14,6 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": []
 }

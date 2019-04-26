@@ -45,19 +45,30 @@ namespace SimpleVR
 		public Vector3 Velocity { get { return CharacterController.velocity; } }
 		public bool TurnsBlocked { get; set; } = false;
 		public bool MovementBlocked { get; set; } = false;
-		#endregion
+        #endregion
 
-		private void Awake()
+        private void GetData()
+        {
+            trackedObjectsSiblingIndex = trackedObjects.GetSiblingIndex();
+
+            CharacterController = GetComponent<CharacterController>();
+
+            HeadTransform = GetComponentInChildren<Camera>().transform;
+
+            HandsVR = GetComponentsInChildren<HandVR>();
+        }
+
+        private void OnValidate()
+        {
+			GetData();
+        }
+
+        private void Awake()
 		{
-			trackedObjectsSiblingIndex = trackedObjects.GetSiblingIndex();
+			GetData();
 
-			CharacterController = GetComponent<CharacterController>();
 			//characterController.enableOverlapRecovery = true;
-
-			HeadTransform = GetComponentInChildren<Camera>().transform;
 			//HeadTransform.GetComponent<UnityEngine.SpatialTracking.TrackedPoseDriver>().originPose = Pose.identity;	//Not needed because unchecked UseRelativeTransform
-
-			HandsVR = GetComponentsInChildren<HandVR>();
 
 			Init();
 		}
